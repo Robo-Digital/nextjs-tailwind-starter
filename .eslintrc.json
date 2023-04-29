@@ -1,11 +1,61 @@
 {
-  "extends": [
-    "airbnb-base",
-    "next/core-web-vitals",
-    "plugin:prettier/recommended"
-  ],
+  "extends": ["airbnb-base", "next/core-web-vitals", "prettier"],
+  "plugins": ["prettier"],
   "rules": {
+    "prettier/prettier": ["error"],
+    "arrow-body-style": "warn",
+    "no-use-before-define": "warn",
+    "no-nested-ternary": "warn",
+    "semi": ["warn", "never"],
+    "comma-dangle": ["warn", {
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "arrays": "always-multiline",
+      "exports": "never",
+      "functions": "never"
+    }],
+    "react/self-closing-comp": ["warn", {
+      "component": true,
+      "html": true
+    }],
+    "max-len": ["warn", 150, {
+      "ignoreComments": true
+    }],
+    "no-unused-vars": ["error", {
+      "args": "none",
+      "argsIgnorePattern": "^_",
+      "destructuredArrayIgnorePattern": "^_",
+      "ignoreRestSiblings": true
+    }],
+    "import/order": ["error", {
+      "alphabetize": {
+        "order": "ignore",
+        "caseInsensitive": true
+      }
+    }],
+    "function-paren-newline": ["error", "multiline-arguments"],
     "import/prefer-default-export": "off",
-    "no-restricted-exports": "off"
+    "import/no-extraneous-dependencies": "off",
+    "global-require": "off",
+    "class-methods-use-this": "off",
+    "space-before-function-paren": "off",
+    "indent": "off",
+    "quotes": "off",
+    "camelcase": "off",
+    "complexity": "off",
+    "no-console": "off",
+    "no-underscore-dangle": "off",
+    "capitalized-comments": "off",
+    "object-curly-newline": "off",
+    "operator-linebreak": "off",
+    "no-negated-condition": "off",
+    "no-warning-comments": ["off", { "terms": [ "todo", "fixme", "hmm", "hmmm" ], "location": "start" }],
+    "no-restricted-exports": "off",
+    "react/prop-types": "off",
+    "react/no-array-index-key": "off",
+    "react/destructuring-assignment": "warn",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }]
   }
 }

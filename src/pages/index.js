@@ -1,8 +1,8 @@
-import { Open_Sans as OpenSans } from "next/font/google";
+import { Open_Sans as OpenSans } from 'next/font/google'
 
-import Logo from "../assets/robodigital.svg";
+import Logo from '../assets/robodigital.svg'
 
-const opensans = OpenSans({ subsets: ["latin"] });
+const opensans = OpenSans({ subsets: ['latin'] })
 
 const HomePage = () => (
   <div className="flex h-screen flex-col items-center justify-center gap-2 bg-gray-200">
@@ -13,6 +13,6 @@ const HomePage = () => (
       <p className={opensans.className}>Next.js Tailwind Starter</p>
     </div>
   </div>
-);
+)
 
-export default HomePage;
+export default HomePage

@@ -2,9 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   webpack(config) {
-    const fileLoaderRule = config.module.rules.find((rule) =>
-      rule.test?.test?.(".svg")
-    );
+    const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test?.('.svg'))
     config.module.rules.push(
       {
         ...fileLoaderRule,
@@ -15,13 +13,13 @@ const nextConfig = {
         test: /\.svg$/i,
         issuer: /\.[jt]sx?$/,
         resourceQuery: { not: /url/ }, // exclude if *.svg?url
-        use: ["@svgr/webpack"],
+        use: ['@svgr/webpack'],
       }
-    );
-    fileLoaderRule.exclude = /\.svg$/i;
+    )
+    fileLoaderRule.exclude = /\.svg$/i
 
-    return config;
+    return config
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
